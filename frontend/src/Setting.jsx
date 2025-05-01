@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './Setting.css';
 import axios from 'axios';
+import { API_BASE_URL } from './Config';
 
 const Setting = () => {
   // ✅ Get user from localStorage
@@ -20,7 +21,7 @@ const Setting = () => {
     const fetchUser = async () => {
       if (!userId) return;
       try {
-        const response = await axios.get('http://localhost:3000/api/user');
+        const response = await axios.get(API_BASE_URL+'/api/user');
         const userData = response.data.find(u => u._id === userId);
         if (userData) {
           setFormData({
@@ -53,7 +54,7 @@ const Setting = () => {
 
     try {
       await axios.put(
-        `http://localhost:3000/api/user/${formData.id}`,
+        `${API_BASE_URL}/api/user/${formData.id}`,
         formData,
         {
           headers: {

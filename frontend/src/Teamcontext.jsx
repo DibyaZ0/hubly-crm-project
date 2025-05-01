@@ -1,8 +1,9 @@
 // TeamContext.jsx
 import React, { createContext, useState, useEffect } from 'react';
 import axios from 'axios';
+import { API_BASE_URL } from './Config';
 
-const API_BASE_URL = 'http://localhost:3000/api/user';
+
 
 export const TeamContext = createContext();
 
@@ -10,7 +11,7 @@ export const TeamProvider = ({ children }) => {
   const [teamMembers, setTeamMembers] = useState([]);
 
   useEffect(() => {
-    axios.get(API_BASE_URL)
+    axios.get(API_BASE_URL +'/api/user')
       .then((res) => setTeamMembers(res.data))
       .catch((err) => console.error('Failed to load user data:', err));
   }, []);

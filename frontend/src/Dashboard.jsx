@@ -2,8 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Dashboard.css';
 import axios from 'axios';
+import { API_BASE_URL } from './Config';
 
-const API_BASE_URL = "http://localhost:3000/api/tickets";
+const API_BASE_URL_TICKET = "/api/tickets";
 
 const Dashboard = () => {
   const navigate = useNavigate();
@@ -32,7 +33,7 @@ const Dashboard = () => {
   ]);
 
   useEffect(() => {
-    axios.get(API_BASE_URL)
+    axios.get(API_BASE_URL+API_BASE_URL_TICKET)
       .then((res) => setTicket(res.data.tickets))
       .catch((err) => console.error('Failed to load user data:', err));
   }, []);

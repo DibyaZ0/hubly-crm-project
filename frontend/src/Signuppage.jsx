@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import './Signuppage.css';
+import { API_BASE_URL } from './Config';
 
 const Signuppage = () => {
   const navigate = useNavigate();
@@ -45,7 +46,7 @@ const Signuppage = () => {
         password: formData.password,
       };
 
-      const response = await axios.post('http://localhost:3000/api/user', payload);
+      const response = await axios.post(API_BASE_URL+'api/user', payload);
       navigate('/dashboard');
     } catch (error) {
       console.error('Signup error:', error);

@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router';
 import axios from 'axios';
 import './Loginpage.css';
+import { API_BASE_URL } from './Config';
 
-const API_BASE_URL = 'http://localhost:3000/api/';
+
 
 const Loginpage = () => {
   const navigate = useNavigate();
@@ -33,7 +34,7 @@ const Loginpage = () => {
         password: givenData.password,
       };
 
-      const response = await axios.post(API_BASE_URL + 'login', payload);
+      const response = await axios.post(API_BASE_URL + '/api/login', payload);
       const user = response.data.user;
 
       localStorage.setItem('user', JSON.stringify(user));

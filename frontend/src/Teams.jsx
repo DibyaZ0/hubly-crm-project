@@ -3,8 +3,9 @@ import { useNavigate } from 'react-router-dom';
 import { TeamContext } from './Teamcontext';
 import axios from 'axios';
 import './Teams.css';
+import { API_BASE_URL } from './Config';
 
-const API_BASE_URL = 'http://localhost:3000/api/user';
+
 
 const Teams = () => {
   const { teamMembers, setTeamMembers, addMember, updateMember, deleteMember } = useContext(TeamContext);
@@ -57,13 +58,13 @@ const Teams = () => {
 
   const handleConfirmDelete = async () => {
     try {
-      const response = await axios.post('http://localhost:3000/api/user/delete', {
+      const response = await axios.post(API_BASE_URL+'api/user/delete', {
         action: 'delete',
         id: memberToDelete,
       });
   
       if (response.status === 200) {
-        deleteMember(memberToDelete); // now update frontend state
+        deleteMember(memberToDelete); 
         setShowConfirmPopup(false);
         setMemberToDelete(null);
       } else {
