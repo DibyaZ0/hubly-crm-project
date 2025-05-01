@@ -8,6 +8,7 @@ export async function createUser(user) {
   try {
     const id = await getLatestUserId();
     user.id = id;
+    if(user.password != null && user.password != undefined ) 
     user.password = await bcrypt.hash(user.password, 10);
     const result = await getDB().collection(collectionName).insertOne(user);
     if (result.acknowledged) {
