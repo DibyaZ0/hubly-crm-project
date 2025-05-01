@@ -1,5 +1,6 @@
 import { getDB } from './mongo-context.js';
 import { ObjectId } from 'mongodb';
+import bcrypt from 'bcrypt';
 const collectionName = "users";
 
 // CREATE
@@ -7,6 +8,7 @@ export async function createUser(user) {
   try {
     const id = await getLatestUserId();
     user.id = id;
+    user.password = await bcrypt.hash(user.password, 10);
     const result = await getDB().collection(collectionName).insertOne(user);
     if (result.acknowledged) {
       const insertedUser = await getDB().collection(collectionName).findOne({ _id: result.insertedId });
@@ -51,7 +53,7 @@ export async function createUser(user) {
           name: user.firstName,
           lastName: user.lastName,
           email: user.email,
-          password: user.password,
+          password: await bcrypt.hash(user.password, 10)
         },
         }
       );
@@ -77,8 +79,7 @@ export async function createUser(user) {
 export async function loginUser(username, password) {
   try {
     const user = await getDB().collection(collectionName).findOne({ email:username });
-
-    if ((user && user.password !== password) || !user) {
+    if ((user && !await bcrypt.compare(password, user.password)) || !user) {
       return null;
     }
 
