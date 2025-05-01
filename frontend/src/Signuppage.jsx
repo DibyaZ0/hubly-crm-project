@@ -47,6 +47,9 @@ const Signuppage = () => {
       };
 
       const response = await axios.post(API_BASE_URL+'/api/user', payload);
+      if (response.status === 200) {
+        localStorage.setItem('user', JSON.stringify(response.data.user));
+      }
       navigate('/dashboard');
     } catch (error) {
       console.error('Signup error:', error);
