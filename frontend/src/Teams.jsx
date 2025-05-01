@@ -42,7 +42,7 @@ const Teams = () => {
 
     try {
       setShowForm(false);
-      const response = await axios.post(API_BASE_URL, newMember);
+      const response = await axios.post(API_BASE_URL+'/api/user', newMember);
       addMember(response.data.user)
       setShowForm(false);
     } catch (error) {
