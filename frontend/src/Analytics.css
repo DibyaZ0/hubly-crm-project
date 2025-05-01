@@ -1,0 +1,99 @@
+.analytics-container {
+    padding: 20px;
+    margin-left: 120px; 
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+  }
+  
+  .analytics-container h2 {
+    margin-bottom: 20px;
+  }
+  
+  .analytics-container h1,
+  .analytics-container h2,
+  .analytics-container h3,
+  .analytics-container h4,
+  .analytics-container h5,
+  .analytics-container h6 {
+    font-family: revert;
+    font-size: revert;
+    font-weight: bold;
+  }
+
+  .missed-chats, .average-reply, .resolved-tickets, .total-chats {
+    margin-bottom: 40px;
+  }
+  
+  h3 {
+    color: green;
+    margin-bottom: 10px;
+  }
+  
+  .reply-info, .ticket-info, .chat-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .reply-info p, .ticket-info p, .chat-info p {
+    max-width: 70%;
+  }
+  
+  .time, .total-number {
+    font-size: 24px;
+    color: green;
+    font-weight: bold;
+  }
+  
+  .circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 6px solid green;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 18px;
+    color: green;
+  }
+
+  .progress-ring {
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    position: relative;
+  }
+  
+  .progress-circle {
+    transform: rotate(-90deg);
+  }
+  
+  .progress-circle circle {
+    fill: none;
+    stroke-width: 10;
+    r: 40;
+    cx: 50;
+    cy: 50;
+  }
+  
+  .background {
+    stroke: #f0f0f0;
+  }
+  
+  .progress {
+    stroke: limegreen;
+    stroke-dasharray: 251.2;
+    stroke-dashoffset: calc(251.2 - (251.2 * 80 / 100));
+    transition: stroke-dashoffset 1s ease;
+  }
+  
+  .progress-circle text {
+    font-size: 18px;
+    font-weight: bold;
+    fill: #333;
+    transform: rotate(90deg);
+    transform-origin: 50% 50%;
+  }
+  

@@ -1,0 +1,81 @@
+.setting-container {
+    margin-left: 120px;
+    padding: 20px 60px 40px 20px; 
+    background-color: #f9fafb;
+    min-height: 100vh;
+    overflow-y: auto;
+    box-sizing: border-box;
+    position: relative;
+  }
+  
+  .page-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #1f2937;
+    margin: 0;
+    padding-top: 5px; 
+    padding-left: 0px; 
+  }
+  
+  .setting-header {
+    margin-top: 40px;
+    margin-bottom: 30px;
+  }
+  
+  .setting-header h2 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #1f2937;
+    border-bottom: 2px solid #1d4ed8;
+    display: inline-block;
+    padding-bottom: 6px;
+  }
+  
+  .edit-profile-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 500px;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group label {
+    margin-bottom: 8px;
+    color: #6b7280;
+    font-weight: 500;
+  }
+  
+  .form-group input {
+    padding: 10px 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    font-size: 16px;
+  }
+  
+  .save-button-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+  }
+  
+  .save-button {
+    background-color: #164e91;
+    color: white;
+    border: none;
+    padding: 12px 32px;
+    border-radius: 12px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .save-button:hover {
+    background-color: #1d4ed8;
+  }
+  
+  .setting3{
+    margin-top: 830px;
+  }
