@@ -29,8 +29,8 @@ const Setting = () => {
             firstName: userData.name || '',
             lastName: userData.lastName || '',
             email: userData.email || '',
-            password: userData.password || '',
-            confirmPassword: userData.password || '',
+            password:  '',
+            confirmPassword:   '',
           });
         }
       } catch (error) {
