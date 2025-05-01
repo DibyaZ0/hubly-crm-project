@@ -58,7 +58,7 @@ const Teams = () => {
 
   const handleConfirmDelete = async () => {
     try {
-      const response = await axios.post(API_BASE_URL+'api/user/delete', {
+      const response = await axios.post(API_BASE_URL+'/api/user/delete', {
         action: 'delete',
         id: memberToDelete,
       });
