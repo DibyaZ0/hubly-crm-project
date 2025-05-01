@@ -17,7 +17,7 @@ const Sidebar = () => {
     <div className="sidebar">
       <div className="top-section">
         <div className="logo23">
-          <img src="./src/images/logo 2.png" alt="Logo" />
+          <img src="/images/logo 2.png" alt="Logo" />
         </div>
         <nav className="nav-links">
           {menuItems.map((item) => (

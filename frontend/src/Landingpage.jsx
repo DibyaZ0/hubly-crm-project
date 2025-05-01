@@ -7,7 +7,7 @@ const LandingPage = () => {
   return (
     <div className="container">
       <header className="header">
-        <h1 className="logo20"> <img src="./src/images/logo 1.png" /></h1>
+        <h1 className="logo20"> <img src="/images/logo 1.png" /></h1>
         <div className="auth-buttons">
           <button className="ghost-button" onClick={() => navigate('/login')}>Login</button>
           <button className="primary-button" onClick={() => navigate('/signup')}>Sign Up</button>
@@ -29,28 +29,28 @@ const LandingPage = () => {
 
         <section className="image-section">
           <div className="image-group">
-          <img src="./src/images/image.png" className="base-image" alt="Main" />
-          <img src="./src/images/image 26.png" className="overlay bottom-right" alt="Overlay 1" />
-          <img src="./src/images/Card 1.png" className="overlay top-right" alt="Overlay 2" />
+          <img src="/images/image.png" className="base-image" alt="Main" />
+          <img src="/images/image 26.png" className="overlay bottom-right" alt="Overlay 1" />
+          <img src="/images/Card 1.png" className="overlay top-right" alt="Overlay 2" />
           </div>
         </section>
 
         <section className="brand-banner">
-           <img src="./src/images/image copy.png" /> 
+           <img src="/images/image copy.png" /> 
         </section>
 
         <section className="brand-banner1">
-           <img src="./src/images/image1.png" /> 
+           <img src="/images/image1.png" /> 
         </section>
 
         <section className="brand-banner2">
-           <img src="./src/images/image 2.png" /> 
+           <img src="/images/image 2.png" /> 
         </section>
 
         <section className="brand-banner3">
            <div className="image-container">
-           <img className="main-image" src="./src/images/image 25.png" alt="Main visual" />
-           <img className="overlay-logo" src="./src/images/logo 1.png" alt="Logo" />
+           <img className="main-image" src="/images/image 25.png" alt="Main visual" />
+           <img className="overlay-logo" src="/images/logo 1.png" alt="Logo" />
            </div>
         </section>
 

@@ -54,7 +54,7 @@ const Loginpage = () => {
     <div className="login-page">
       <div className="login-left">
         <div className="logo-container">
-          <img src="./src/images/logo 1.png" alt="Logo" />
+          <img src="/images/logo 1.png" alt="Logo" />
         </div>
 
         <div className="login-box">
@@ -105,7 +105,7 @@ const Loginpage = () => {
       </div>
 
       <div className="login-right">
-        <img src="./src/images/Frame.png" alt="Working person" />
+        <img src="/images/Frame.png" alt="Working person" />
       </div>
     </div>
   );

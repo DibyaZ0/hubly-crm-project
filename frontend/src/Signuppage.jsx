@@ -46,7 +46,7 @@ const Signuppage = () => {
         password: formData.password,
       };
 
-      const response = await axios.post(API_BASE_URL+'api/user', payload);
+      const response = await axios.post(API_BASE_URL+'/api/user', payload);
       navigate('/dashboard');
     } catch (error) {
       console.error('Signup error:', error);
@@ -58,7 +58,7 @@ const Signuppage = () => {
     <div className="signup-page">
       <div className="signup-left">
         <div className="logo">
-          <img src="./src/images/logo 1.png" alt="Logo" />
+          <img src="/images/logo 1.png" alt="Logo" />
         </div>
 
         <div className="signup-box">
@@ -132,7 +132,7 @@ const Signuppage = () => {
       </div>
 
       <div className="signup-right">
-        <img src="./src/images/Frame.png" alt="Working person" />
+        <img src="/images/Frame.png" alt="Working person" />
       </div>
     </div>
   );
